@@ -1,5 +1,7 @@
 package com.twowheelmadness.database.models;
 
+import com.twowheelmadness.domain.commons.Cooling;
+import com.twowheelmadness.domain.commons.Fuel;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -11,7 +13,7 @@ import lombok.*;
 @AllArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class Specs {
+public class SpecsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     @Column(nullable = false)
@@ -52,17 +54,4 @@ public class Specs {
     private Boolean hasCruiseControl;
     private Boolean hasSlipperClutch;
     private Boolean hasQuickShifter;
-
-
-    public enum Cooling {
-        LIQUID_COOLED,
-        AIR_COOLED,
-        OIL_COOLED,
-        OTHERS
-    }
-    public enum Fuel {
-        PETROL,
-        DIESEL,
-        OTHERS
-    }
 }

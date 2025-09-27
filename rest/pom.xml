@@ -31,12 +31,13 @@
         <!-- Project modules -->
         <dependency>
             <groupId>com.twowheelmadness</groupId>
-            <artifactId>domain</artifactId>
+            <artifactId>application</artifactId>
             <version>${project.version}</version>
         </dependency>
+
         <dependency>
             <groupId>com.twowheelmadness</groupId>
-            <artifactId>database</artifactId>
+            <artifactId>domain</artifactId>
             <version>${project.version}</version>
         </dependency>
 
@@ -59,6 +60,11 @@
         </dependency>
 
     </dependencies>
+
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+    </properties>
 
     <build>
         <plugins>

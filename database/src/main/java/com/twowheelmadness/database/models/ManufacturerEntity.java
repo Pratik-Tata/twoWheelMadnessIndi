@@ -11,15 +11,14 @@ import lombok.*;
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Builder
 @Entity
-public class Manufacturer {
+public class ManufacturerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "manufacturer_seq")
     @SequenceGenerator(name = "manufacturer_seq", sequenceName = "manufacturer_sequence", allocationSize = 1)
-    @EqualsAndHashCode.Include
     private Long id;
+    @Column(nullable = false, unique = true)
     @EqualsAndHashCode.Include
     private String name;
-    @EqualsAndHashCode.Include
     private String countryOfOrigin;
     private String yearOfEstablishment;
 }

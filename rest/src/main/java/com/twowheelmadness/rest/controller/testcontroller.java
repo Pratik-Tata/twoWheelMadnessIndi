@@ -23,6 +23,7 @@ public class testcontroller {
 
     @GetMapping("/hello")
     public List<Bike> helloWorld(){
+        System.out.println("add the data first, wiped out");
         return bIkeApplicationService.getAllBikeByName("R1");
     }
 }

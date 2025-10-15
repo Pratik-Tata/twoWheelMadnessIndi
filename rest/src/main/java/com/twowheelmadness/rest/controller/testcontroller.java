@@ -26,4 +26,6 @@ public class testcontroller {
         System.out.println("add the data first, wiped out");
         return bIkeApplicationService.getAllBikeByName("R1");
     }
+
+    //todo create a new API to compare two bikes
 }
